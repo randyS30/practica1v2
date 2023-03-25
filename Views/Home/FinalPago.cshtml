@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Pago";
+}
+
+<h1>Practica - Metodo de pago</h1>
+
+<form method="post" action="/Home/Pago">
+<br>
+  <br>
+    <label for="tarjeta">Tarjeta de crédito:</label>
+  <input type="text" id="tarjeta" name="tarjeta" required>
+  <br>
+  <br>
+  <br>
+  <label for="finDia">Fecha de vencimiento (DD/MM):</label>
+  <input type="text" id="finDia" name="finDia" pattern="\d\d/\d\d" required>
+  <br>
+  <br>
+  <br>
+  <label for="montoP">Monto:</label>
+  <input type="number" id="montoP" name="montoP" step="0.01" min="0" required>
+  <br>
+  <br>
+  <br>
+  <label for="diasA">Días atrasados:</label>
+  <input type="number" id="diasA" name="diasA" min="0">
+  <br>
+  <br>
+  <br>
+  <button type="button" onclick="calcularMontoT()">Calcular cargo por mora</button>
+  <br>
+  <br>
+  <br>
+  <label for="mora">Mora a pagar:</label>
+  <input type="number" id="mora" name="mora" step="0.01" min="0" readonly>
+  <br>
+  <br>
+  <br>
+  <button type="submit">Cancelar</button>
+</form>
+
+<script>
+function calcularMontoT() {
+  const montoP = document.getElementById('montoP').value;
+  const diasA = document.getElementById('diasA').value;
+  const moraDia = 0.005; 
+
+  const pagoFin = montoP * (moraDia * diasA);
+
+  document.getElementById('mora').value = pagoFin.toFixed(2);
+}
+</script>
+

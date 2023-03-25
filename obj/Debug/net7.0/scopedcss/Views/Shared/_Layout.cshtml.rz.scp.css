@@ -1,0 +1,65 @@
+body[b-3nb20wieyd] {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1[b-3nb20wieyd] {
+  text-align: center;
+  color: #444444;
+}
+
+form[b-3nb20wieyd] {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+label[b-3nb20wieyd] {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444444;
+}
+
+input[type="text"][b-3nb20wieyd],
+input[type="number"][b-3nb20wieyd] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus[b-3nb20wieyd],
+input[type="number"]:focus[b-3nb20wieyd] {
+  outline: none;
+  border-color: #0077ff;
+}
+
+button[type="button"][b-3nb20wieyd],
+button[type="submit"][b-3nb20wieyd] {
+  background-color: #0077ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="button"]:hover[b-3nb20wieyd],
+button[type="submit"]:hover[b-3nb20wieyd] {
+  background-color: #0057cb;
+}
+
+input[readonly][b-3nb20wieyd] {
+  background-color: #f0f0f0;
+  color: #444444;
+}
